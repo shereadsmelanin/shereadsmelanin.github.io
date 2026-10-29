@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>She Reads Melanin Library</title>
+<meta name="description" content="Every book on my shelves, the ones I've read, and what I posted about them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--BODY-->
+<main>
+  <header class="hero">
+    <div class="eyebrow" id="eyebrow">A personal archive</div>
+    <h1 class="headline"><span id="headline">Welcome to my library</span><span class="caret" aria-hidden="true"></span></h1>
+    <div class="views" id="views" role="group" aria-label="Which shelf"></div>
+    <a class="pill" id="recommend" href="#" target="_blank" rel="noopener" hidden>Recommend a book</a>
+    <nav class="socials" id="socials" aria-label="Social profiles"></nav>
+    <label class="search" for="searchInput">
+      <span class="visually-hidden">Search</span>
+      <input id="searchInput" type="search" placeholder="What are you looking for?" autocomplete="off">
+    </label>
+    <div class="chips" id="genreChips" role="group" aria-label="Filter by genre"></div>
+  </header>
+
+  <section class="shelf" aria-label="Bookshelf">
+    <div class="shelf-scroll" id="shelfScroll">
+      <div class="shelf-row" id="shelfRow"></div>
+    </div>
+    <div class="plank" aria-hidden="true"></div>
+    <div class="shelf-foot">
+      <div class="foot-left" id="footLeft"></div>
+      <div class="foot-right">
+        <button class="pill small" id="pickButton" type="button">Pick my next read</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-foot">
+    <span id="footerName"></span>
+  </footer>
+</main>
+
+<dialog id="bookDialog" aria-labelledby="cardTitle">
+  <article class="card">
+    <button class="card-close" type="button" id="closeCard" aria-label="Close">×</button>
+    <div class="card-cover" id="cardCover"></div>
+    <div class="card-body">
+      <div class="eyebrow" id="cardEyebrow"></div>
+      <h2 id="cardTitle"></h2>
+      <p class="card-author" id="cardAuthor"></p>
+      <div class="card-verdict" id="cardVerdict"></div>
+      <dl class="card-rows" id="cardRows"></dl>
+      <div class="posts" id="cardPosts"></div>
+    </div>
+  </article>
+</dialog>
+<!--/BODY-->
+<script src="books.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
